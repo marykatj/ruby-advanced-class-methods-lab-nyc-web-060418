@@ -10,4 +10,22 @@ class Song
     self.class.all << self
   end
 
+  def self.create
+    self.class.all << self
+  end
+
+  def self.new_by_name(song)
+    song.self
+  end
+
+  def self.create_by_name(song)
+    @name = song.self
+    self.class.all << @name
+  end
+
+  def self.find_by_name(song)
+    self.class.all.find {|song| song.name == song }
+    return song.self
+  end
+
 end
